@@ -3,7 +3,6 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:logistica_entregador/features/cliente/presentation/screens/editar/editar_cliente_notifier.dart';
 import 'package:logistica_entregador/features/comprovante/presentation/screens/editar/editar_comprovante_notifier.dart';
 import 'package:logistica_entregador/theme/button_style.dart';
 
