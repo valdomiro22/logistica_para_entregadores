@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:logistica_entregador/features/comprovante/presentation/screens/adicionar/adicionar_comprovante_notifier.dart';
+import 'package:logistica_entregador/features/comprovante/presentation/screens/editar/editar_comprovante_notifier.dart';
 import 'package:path_provider/path_provider.dart'; // Para pegar uma pasta segura do app
 
 class TelaAssinaturaScreen extends ConsumerStatefulWidget {
@@ -92,6 +93,7 @@ class _TelaAssinaturaScreenState extends ConsumerState<TelaAssinaturaScreen> {
       }
 
       ref.read(adicionarComprovanteProvider.notifier).onAssinaturaChanged(caminhoImagem);
+      ref.read(editarComprovanteProvider.notifier).onAssinaturaChanged(caminhoImagem);
 
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(

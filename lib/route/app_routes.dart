@@ -110,7 +110,7 @@ class AppRoutes {
     ),
 
     GoRoute(
-      path: '${AppRoutesNames.listaComprovantes}/:entregaId/clienteId',
+      path: '${AppRoutesNames.listaComprovantes}/:entregaId/:clienteId',
       builder: (context, state) {
         final entregaId = state.pathParameters['entregaId']!;
         final clienteId = state.pathParameters['clienteId']!;

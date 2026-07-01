@@ -24,7 +24,7 @@ class ListaEntregasPorClienteScreen extends ConsumerWidget {
         title: clienteState.when(
           loading: () => const Text('Entregas'),
           error: (_, _) => const Text('Entregas'),
-          data: (cliente) => Text('Entregas de ${cliente.nome}'),
+          data: (cliente) => Text(cliente.nome),
         ),
       ),
       body: entregaState.when(

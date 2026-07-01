@@ -24,7 +24,7 @@ class DetalhesComprovanteScreen extends ConsumerWidget {
         loading: () => const Center(child: CircularProgressIndicator()),
         error: (error, stackTrace) => Center(
           child: Padding(
-            padding: const EdgeInsets.all(16.0),
+            padding: const EdgeInsets.all(10),
             child: Text(
               error.toString().replaceFirst('Exception: ', ''),
               style: const TextStyle(color: Colors.red, fontSize: 16),
@@ -43,7 +43,7 @@ class DetalhesComprovanteScreen extends ConsumerWidget {
 
           return SingleChildScrollView(
             physics: const BouncingScrollPhysics(),
-            padding: const EdgeInsets.all(16.0),
+            padding: const EdgeInsets.all(10),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -150,4 +150,5 @@ class DetalhesComprovanteScreen extends ConsumerWidget {
       ],
     );
   }
+
 }

@@ -33,12 +33,11 @@ class ItemListaComprovante extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       elevation: 1,
-      margin: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       child: InkWell(
         onTap: onItemClick,
         child: Padding(
-          padding: const EdgeInsets.only(left: 16, top: 12, bottom: 12, right: 4),
+          padding: const EdgeInsets.only(left: 10, top: 10, bottom: 10, right: 2),
           child: Row(
             children: [
               // Avatar com a inicial do cliente
@@ -73,6 +72,7 @@ class ItemListaComprovante extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Row(
                               children: [
@@ -84,6 +84,7 @@ class ItemListaComprovante extends StatelessWidget {
                                 ),
                               ],
                             ),
+                            const SizedBox(height: 4),
 
                             Row(
                               children: [

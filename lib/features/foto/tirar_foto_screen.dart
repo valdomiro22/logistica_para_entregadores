@@ -3,6 +3,8 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:logistica_entregador/features/cliente/presentation/screens/editar/editar_cliente_notifier.dart';
+import 'package:logistica_entregador/features/comprovante/presentation/screens/editar/editar_comprovante_notifier.dart';
 import 'package:logistica_entregador/theme/button_style.dart';
 
 import '../comprovante/presentation/screens/adicionar/adicionar_comprovante_notifier.dart';
@@ -25,6 +27,7 @@ class _TirarFotoScreenState extends ConsumerState<TirarFotoScreen> {
       if (imagem == null) return;
 
       ref.read(adicionarComprovanteProvider.notifier).onFotoChanged(imagem.path);
+      ref.read(editarComprovanteProvider.notifier).onFotoChanged(imagem.path);
 
       setState(() {
         foto = File(imagem.path);
